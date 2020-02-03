@@ -1,0 +1,33 @@
+<script>
+  import { getResponse } from "@curi/svelte";
+
+  $: response = getResponse();
+</script>
+
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .layout {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1170px;
+  }
+  .content {
+    display: flex;
+    min-width: 920px;
+  }
+</style>
+
+<div class="container">
+  <div class="layout">
+    <div class="content">
+      {#if $response}
+        <svelte:component this={$response.body} />
+      {/if}
+
+    </div>
+  </div>
+</div>
