@@ -1,5 +1,6 @@
 <script>
   import Link from "@curi/svelte/components/Link.svelte";
+  import UserHeader from "./components/UserHeader.svelte";
 </script>
 
 <style>
@@ -15,8 +16,7 @@
 </style>
 
 <div>
-  <Link name="Home">
-  </Link>
-  ArmUp
+  <Link name="Dashboard">ArmUp</Link>
 </div>
 <hr />
+<UserHeader />

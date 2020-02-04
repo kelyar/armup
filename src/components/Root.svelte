@@ -1,5 +1,7 @@
 <script>
   import { getResponse } from "@curi/svelte";
+  import Link from "@curi/svelte/components/Link.svelte";
+  import Header from "../Header.svelte";
 
   $: response = getResponse();
 </script>
@@ -23,10 +25,13 @@
 
 <div class="container">
   <div class="layout">
+    <Header />
     <div class="content">
       {#if $response}
         <svelte:component this={$response.body} />
       {/if}
+
+      <Link name="Inventory">Inventory</Link>
 
     </div>
   </div>

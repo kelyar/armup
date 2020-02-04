@@ -1,4 +1,5 @@
 import { prepareRoutes } from "@curi/router";
+import Inventory from './components/Inventory.svelte';
 
 export const routes = prepareRoutes([
   {
@@ -6,7 +7,16 @@ export const routes = prepareRoutes([
     path: "",
     respond() {
       return {
-        body: BlankSlate
+        body: '',
+      };
+    }
+  },
+  {
+  name: "Inventory",
+    path: "inventory",
+    respond() {
+      return {
+        body: Inventory,
       };
     }
   }
