@@ -31,7 +31,7 @@
         <svelte:component this={$response.body} />
       {/if}
 
-      <Link name="Inventory">Inventory</Link>
+      <a href="/#inventory">Inventory</a>
 
     </div>
   </div>
